@@ -1,21 +1,6 @@
 import axios, { AxiosError } from "axios";
 import { useAuthStore } from "@/store/authStore";
 
-// In dev, requests go through Vite's proxy at /api (see vite.config.ts) to avoid CORS.
-// In production, set VITE_API_BASE_URL to the real backend URL at build/deploy time —
-// note the deployed origin will also need to be CORS-allowed by the backend, or routed
-// through an equivalent server-side proxy/rewrite on your hosting platform.
-// export const BASE_URL = import.meta.env.DEV
-//   ? "/api"
-//   : (import.meta.env.VITE_API_BASE_URL as string) || "https://admin-moderator-backend-staging.up.railway.app/api";
-
-// export const apiClient = axios.create({
-//   baseURL: BASE_URL,
-//   headers: {
-//     "Content-Type": "application/json",
-//   },
-// });
-// Always target relative /api so both Vite (dev) and Vercel (prod) proxy requests
 export const BASE_URL = import.meta.env.VITE_API_BASE_URL || "/api";
 
 export const apiClient = axios.create({
