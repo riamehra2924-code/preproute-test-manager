@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  /* PrepRoute brand tokens, derived from Figma screenshots */
+  --color-brand-50: #F0F1FE;
+  --color-brand-100: #E4E6FD;
+  --color-brand-200: #C9CCFB;
+  --color-brand-400: #7B7FF0;
+  --color-brand-500: #5B5FEA;
+  --color-brand-600: #4A4ED8;
+  --color-brand-700: #3C3FB8;
+  --color-brand-900: #24246E;
+
+  --color-ink-900: #101323;
+  --color-ink-700: #1F2333;
+  --color-ink-500: #4B5066;
+  --color-ink-400: #6B7189;
+  --color-ink-300: #9AA0B4;
+  --color-ink-200: #D6D9E4;
+  --color-ink-100: #E9EBF3;
+  --color-ink-50:  #F6F7FB;
+
+  --color-success-50: #ECFDF5;
+  --color-success-500: #10B981;
+  --color-success-700: #047857;
+
+  --color-warn-50: #FFFBEB;
+  --color-warn-500: #F59E0B;
+  --color-warn-700: #B45309;
+
+  --color-danger-50: #FEF2F2;
+  --color-danger-500: #EF4444;
+  --color-danger-700: #B91C1C;
+
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  --radius-card: 0.875rem;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-ink-50);
+  color: var(--color-ink-900);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  border-color: var(--color-ink-100);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+}
+
+/* number input spinner arrows visible & styled (marking scheme steppers) */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-ink-200);
+  border-radius: 999px;
+}
